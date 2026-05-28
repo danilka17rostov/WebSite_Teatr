@@ -1,0 +1,607 @@
+/* ===== HERO СТРАНИЦЫ ===== */
+.page-hero {
+    padding-top: 80px;
+    min-height: 35vh;
+    background: linear-gradient(135deg, #f5ede2 0%, #efe4d5 100%);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://images.unsplash.com/photo-1503095396549-8070f434a80b?q=80&w=2071&auto=format');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.05;
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 0.8s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #3d2c1c;
+    margin-bottom: 16px;
+}
+
+.hero-description-short {
+    font-size: 1rem;
+    color: #8b7a66;
+    margin-top: 16px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.breadcrumbs {
+    font-size: 0.9rem;
+    color: #8b7a66;
+}
+
+.breadcrumbs a {
+    color: #b58b48;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumbs a:hover {
+    color: #9a6e3a;
+}
+
+.breadcrumbs span {
+    margin: 0 8px;
+}
+
+.breadcrumbs .current {
+    color: #6b5a48;
+}
+
+/* ===== КОНТАКТНАЯ ИНФОРМАЦИЯ ===== */
+.contact-info {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+.info-card {
+    text-align: center;
+    padding: 32px 24px;
+    background: #f9f6f0;
+    border-radius: 24px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(181, 139, 72, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(181, 139, 72, 0.05), transparent);
+    transition: left 0.5s;
+}
+
+.info-card:hover::before {
+    left: 100%;
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: rgba(181, 139, 72, 0.4);
+}
+
+.info-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #f5ede2, #efe4d5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: transform 0.3s;
+}
+
+.info-card:hover .info-icon {
+    transform: scale(1.05);
+}
+
+.info-icon i {
+    font-size: 2rem;
+    color: #b58b48;
+}
+
+.info-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: #3d2c1c;
+    margin-bottom: 16px;
+}
+
+.info-card p {
+    font-size: 0.9rem;
+    color: #6b5a48;
+    line-height: 1.6;
+}
+
+.info-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    color: #b58b48;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s;
+    padding: 8px 16px;
+    border-radius: 30px;
+    background: rgba(181, 139, 72, 0.1);
+}
+
+.info-link:hover {
+    gap: 12px;
+    background: #b58b48;
+    color: #fff;
+}
+
+/* ===== КАРТА ===== */
+.map-section {
+    padding: 60px 0;
+    background: #f9f6f0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.section-subtitle {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #b58b48;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #3d2c1c;
+    margin-bottom: 16px;
+}
+
+.section-line {
+    width: 60px;
+    height: 2px;
+    background: #b58b48;
+    margin: 0 auto;
+}
+
+.map-wrapper {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.map-container {
+    height: 450px;
+    width: 100%;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+.map-overlay-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.map-info-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 12px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(181, 139, 72, 0.2);
+}
+
+.map-info-card i {
+    font-size: 1.5rem;
+    color: #b58b48;
+}
+
+.map-info-card strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    color: #3d2c1c;
+}
+
+.map-info-card span {
+    font-size: 0.8rem;
+    color: #8b7a66;
+}
+
+/* ===== СХЕМА ПРОЕЗДА ===== */
+.directions {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.directions-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+.direction-card {
+    text-align: center;
+    padding: 32px 24px;
+    background: #f9f6f0;
+    border-radius: 20px;
+    transition: all 0.4s;
+    border: 1px solid rgba(181, 139, 72, 0.1);
+}
+
+.direction-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    border-color: rgba(181, 139, 72, 0.3);
+}
+
+.direction-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #f5ede2, #efe4d5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: transform 0.3s;
+}
+
+.direction-card:hover .direction-icon {
+    transform: scale(1.05);
+}
+
+.direction-icon i {
+    font-size: 2rem;
+    color: #b58b48;
+}
+
+.direction-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: #3d2c1c;
+    margin-bottom: 12px;
+}
+
+.direction-card p {
+    font-size: 0.9rem;
+    color: #6b5a48;
+    line-height: 1.5;
+}
+
+/* ===== ОТДЕЛЫ ТЕАТРА ===== */
+.departments {
+    padding: 60px 0;
+    background: #f9f6f0;
+}
+
+.departments-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.department-item {
+    background: #fff;
+    padding: 28px;
+    border-radius: 20px;
+    border: 1px solid rgba(181, 139, 72, 0.15);
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.department-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    border-color: rgba(181, 139, 72, 0.3);
+}
+
+.department-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #f5ede2, #efe4d5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.department-icon i {
+    font-size: 1.5rem;
+    color: #b58b48;
+}
+
+.department-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: #3d2c1c;
+    margin-bottom: 16px;
+}
+
+.department-item p {
+    font-size: 0.9rem;
+    color: #6b5a48;
+    margin-bottom: 10px;
+}
+
+.department-item i {
+    width: 24px;
+    color: #b58b48;
+    margin-right: 8px;
+}
+
+.work-hours {
+    font-size: 0.8rem;
+    color: #8b7a66;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(181, 139, oraly, 0.15);
+}
+
+/* ===== МОДАЛЬНЫЕ ОКНА ===== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 2100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-container {
+    background: #fff;
+    border-radius: 32px;
+    padding: 40px;
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
+}
+
+.modal-overlay.active .modal-container {
+    transform: scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #8b7a66;
+    cursor: pointer;
+    transition: color 0.3s;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-close:hover {
+    color: #b58b48;
+    background: rgba(181, 139, 72, 0.1);
+}
+
+.modal-divider {
+    height: 1px;
+    background: rgba(181, 139, 72, 0.2);
+    margin: 20px 0;
+}
+
+.modal-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #f5ede2, #efe4d5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+}
+
+.modal-icon i {
+    font-size: 2.5rem;
+    color: #b58b48;
+}
+
+.success-icon i {
+    color: #4caf50;
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.modal-container h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: #3d2c1c;
+    margin-bottom: 16px;
+}
+
+.modal-container p {
+    color: #6b5a48;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.modal-address, .modal-hours, .modal-phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 0;
+}
+
+.modal-address i, .modal-hours i, .modal-phone i {
+    color: #b58b48;
+    width: 24px;
+    font-size: 1.1rem;
+}
+
+.modal-address span, .modal-hours span, .modal-phone span {
+    color: #5a4a38;
+    font-weight: 500;
+}
+
+.modal-btn {
+    background: #b58b48;
+    color: #fff;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 24px;
+}
+
+.modal-btn:hover {
+    background: #9a6e3a;
+    transform: translateY(-2px);
+}
+
+.nav-list a.active {
+    color: #d4b57e;
+    border-bottom: 2px solid #d4b57e;
+}
+
+/* ===== АДАПТИВ ===== */
+@media (max-width: 1200px) {
+    .info-grid,
+    .directions-grid,
+    .departments-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+}
+
+@media (max-width: 900px) {
+    .page-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .map-overlay-info {
+        bottom: 10px;
+        left: 10px;
+    }
+    
+    .map-info-card {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .info-grid,
+    .directions-grid,
+    .departments-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .map-container {
+        height: 300px;
+    }
+    
+    .map-info-card span {
+        display: none;
+    }
+    
+    .map-info-card i {
+        font-size: 1.2rem;
+    }
+}
