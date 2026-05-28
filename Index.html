@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Театр «Феерия» — Официальный сайт</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- ========= ШАПКА САЙТА ========= -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fas fa-mask"></i>
+                    <span>Театр «Феерия»</span>
+                </a>
+            </div>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="schedule.html">Афиша</a></li>
+                    <li><a href="about.html">О театре</a></li>
+                    <li><a href="news.html">Новости</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#" class="btn-ticket" id="mainBuyBtn">
+                    <i class="fas fa-ticket-alt"></i>
+                    Купить билет
+                </a>
+            </div>
+
+            <button class="burger-menu" id="burgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-list">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="schedule.html">Афиша</a></li>
+            <li><a href="about.html">О театре</a></li>
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="#" class="mobile-btn-ticket" id="mobileBuyBtn">Купить билет</a></li>
+        </ul>
+    </div>
+
+    <!-- ========= HERO СЕКЦИЯ ========= -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Театр «Феерия»
+                    <span class="hero-title-accent">магия сцены</span>
+                </h1>
+                <p class="hero-description">
+                    Уютный зал на 400 мест, изысканные постановки, 
+                    уникальная атмосфера. Мы создаём искусство, 
+                    которое трогает душу.
+                </p>
+                <div class="hero-buttons">
+                    <a href="schedule.html" class="hero-btn-primary">
+                        <i class="fas fa-calendar-alt"></i>
+                        Афиша спектаклей
+                    </a>
+                    <a href="about.html" class="hero-btn-secondary">
+                        <i class="fas fa-play"></i>
+                        О театре
+                    </a>
+                </div>
+                
+                <div class="hero-quote">
+                    <i class="fas fa-quote-left"></i>
+                    <p>Театр — это не зеркало, а увеличительное стекло</p>
+                    <span>— Владимир Маяковский</span>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-card">
+                    <i class="fas fa-ticket-alt"></i>
+                    <p>Ближайший спектакль</p>
+                    <h4>«Сон в летнюю ночь»</h4>
+                    <span>15 мая, 19:00</span>
+                    <a href="schedule.html">Забронировать →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========= СЕКЦИЯ АФИША ========= -->
+    <section class="posters">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Ближайшие спектакли</span>
+                <h2 class="section-title">Афиша мая</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="posters-grid">
+                <div class="poster-card">
+                    <div class="poster-date">
+                        <span class="day">15</span>
+                        <span class="month">мая</span>
+                    </div>
+                    <div class="poster-info">
+                        <h3>Сон в летнюю ночь</h3>
+                        <p class="poster-time"><i class="far fa-clock"></i> 19:00</p>
+                        <p class="poster-desc">Волшебная комедия Шекспира в необычном прочтении</p>
+                        <a href="schedule.html" class="poster-link">Подробнее →</a>
+                    </div>
+                </div>
+
+                <div class="poster-card">
+                    <div class="poster-date">
+                        <span class="day">22</span>
+                        <span class="month">мая</span>
+                    </div>
+                    <div class="poster-info">
+                        <h3>Кармен-сюита</h3>
+                        <p class="poster-time"><i class="far fa-clock"></i> 18:30</p>
+                        <p class="poster-desc">Балетная феерия на музыку Бизе — Щедрина</p>
+                        <a href="schedule.html" class="poster-link">Подробнее →</a>
+                    </div>
+                </div>
+
+                <div class="poster-card">
+                    <div class="poster-date">
+                        <span class="day">30</span>
+                        <span class="month">мая</span>
+                    </div>
+                    <div class="poster-info">
+                        <h3>Щелкунчик</h3>
+                        <p class="poster-time"><i class="far fa-clock"></i> 12:00 / 17:00</p>
+                        <p class="poster-desc">Рождественская сказка с невероятными декорациями</p>
+                        <a href="schedule.html" class="poster-link">Подробнее →</a>
+                    </div>
+                </div>
+
+                <div class="poster-card">
+                    <div class="poster-date">
+                        <span class="day">5</span>
+                        <span class="month">июня</span>
+                    </div>
+                    <div class="poster-info">
+                        <h3>Вишнёвый сад</h3>
+                        <p class="poster-time"><i class="far fa-clock"></i> 19:00</p>
+                        <p class="poster-desc">Классика Чехова в современной интерпретации</p>
+                        <a href="schedule.html" class="poster-link">Подробнее →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="posters-footer">
+                <a href="schedule.html" class="btn-all-posters">Вся афиша <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========= СЕКЦИЯ О ТЕАТРЕ ========= -->
+    <section class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <span class="section-subtitle">О театре</span>
+                    <h2 class="section-title">История «Феерии»</h2>
+                    <div class="section-line left"></div>
+                    <p class="about-text">Театр «Феерия» был основан в 2014 году группой энтузиастов, объединённых любовью к настоящему сценическому искусству. За 10 лет мы создали более 50 постановок, которые увидели десятки тысяч зрителей.</p>
+                    <p class="about-text">Наша философия — соединять классическое наследие с современными театральными формами, создавая уникальный язык, понятный и искушённому зрителю, и тем, кто только открывает для себя мир театра.</p>
+                    <p class="about-text">Уютный зал на 400 мест, профессиональная труппа и тёплая атмосфера ждут вас.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <span>30 артистов</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>10 сезонов</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-trophy"></i>
+                            <span>8 наград</span>
+                        </div>
+                    </div>
+                    <a href="about.html" class="btn-about">Подробнее о театре →</a>
+                </div>
+                <div class="about-image">
+                    <div class="about-image-inner"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========= СЕКЦИЯ НОВОСТИ ========= -->
+    <section class="news">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Новости и события</span>
+                <h2 class="section-title">Последние новости</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="news-grid" id="homeNewsGrid">
+                <!-- Новости загружаются динамически -->
+            </div>
+
+            <div class="news-footer">
+                <a href="news.html" class="btn-all-news">Все новости <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========= ФУТЕР ========= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-mask"></i>
+                        <span>Театр «Феерия»</span>
+                    </div>
+                    <p class="footer-desc">Магия сцены, которая трогает душу. Уютный зал, изысканные постановки, уникальная атмосфера.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Меню</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="schedule.html">Афиша</a></li>
+                        <li><a href="about.html">О театре</a></li>
+                        <li><a href="news.html">Новости</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <ul class="footer-contacts">
+                        <li><i class="fas fa-map-marker-alt"></i> г. Санкт-Петербург, Невский пр., 88</li>
+                        <li><i class="fas fa-phone-alt"></i> +7 (812) 123-45-67</li>
+                        <li><i class="far fa-envelope"></i> info@feeriya-theatre.ru</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Режим работы</h4>
+                    <ul class="footer-hours">
+                        <li>Касса: ежедневно 11:00 – 20:00</li>
+                        <li>Спектакли: ср–вс 18:00 – 22:00</li>
+                        <li>Выходной: понедельник</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Театр «Феерия». Все права защищены.</p>
+                <p>Разработка в рамках дипломного проекта</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========= МОДАЛЬНОЕ ОКНО НОВОСТИ ========= -->
+    <div class="news-modal-overlay" id="newsModalOverlay">
+        <div class="news-modal-container">
+            <button class="news-modal-close" id="newsModalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="news-modal-content" id="newsModalContent">
+                <!-- Содержимое новости загружается динамически -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ========= МОДАЛЬНОЕ ОКНО БИЛЕТОВ ========= -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-container">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-icon">
+                <i class="fas fa-ticket-alt"></i>
+            </div>
+            <h2>Билеты только в кассе</h2>
+            <p>Уважаемые зрители! Приносим извинения, но онлайн-продажа билетов временно недоступна.</p>
+            <p>Приобрести билеты можно в кассе театра по адресу:</p>
+            <div class="modal-address">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>г. Санкт-Петербург, Невский пр., 88</span>
+            </div>
+            <div class="modal-hours">
+                <i class="fas fa-clock"></i>
+                <span>Ежедневно с 11:00 до 20:00</span>
+            </div>
+            <div class="modal-phone">
+                <i class="fas fa-phone-alt"></i>
+                <span>+7 (812) 123-45-67</span>
+            </div>
+            <button class="modal-btn" id="modalOkBtn">Понятно, спасибо</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/news-data.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

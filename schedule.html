@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Театр «Феерия» — Афиша</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/schedule.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- ========= ШАПКА ========= -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fas fa-mask"></i>
+                    <span>Театр «Феерия»</span>
+                </a>
+            </div>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="schedule.html" class="active">Афиша</a></li>
+                    <li><a href="about.html">О театре</a></li>
+                    <li><a href="news.html">Новости</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#" class="btn-ticket" id="mainBuyBtn">
+                    <i class="fas fa-ticket-alt"></i>
+                    Купить билет
+                </a>
+            </div>
+
+            <button class="burger-menu" id="burgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-list">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="schedule.html">Афиша</a></li>
+            <li><a href="about.html">О театре</a></li>
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="#" class="mobile-btn-ticket" id="mobileBuyBtn">Купить билет</a></li>
+        </ul>
+    </div>
+
+    <!-- ========= HERO ========= -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1>Афиша</h1>
+                <div class="breadcrumbs">
+                    <a href="index.html">Главная</a>
+                    <span>/</span>
+                    <span class="current">Афиша</span>
+                </div>
+                <p class="hero-description-short">Выберите спектакль и дату — подарите себе вечер искусства</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========= КАЛЕНДАРЬ ========= -->
+    <section class="calendar-section">
+        <div class="container">
+            <div class="calendar-wrapper">
+                <div class="calendar-header">
+                    <button class="calendar-nav prev-month" id="prevMonth">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <span class="current-month-year" id="currentMonthYear">Май 2026</span>
+                    <button class="calendar-nav next-month" id="nextMonth">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="calendar-grid" id="calendarGrid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========= РАСПИСАНИЕ ========= -->
+    <section class="schedule-section">
+        <div class="container">
+            <div class="schedule-header">
+                <h2>Спектакли в <span id="selectedMonth">мае 2026</span></h2>
+                <div class="schedule-legend">
+                    <span><i class="fas fa-tag"></i> Драма</span>
+                    <span><i class="fas fa-tag"></i> Комедия</span>
+                    <span><i class="fas fa-tag"></i> Балет</span>
+                    <span><i class="fas fa-tag"></i> Трагедия</span>
+                </div>
+            </div>
+            <div id="scheduleList" class="schedule-list">
+                <!-- Спектакли загружаются JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ========= ФУТЕР ========= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-mask"></i>
+                        <span>Театр «Феерия»</span>
+                    </div>
+                    <p class="footer-desc">Магия сцены, которая трогает душу. Уютный зал, изысканные постановки, уникальная атмосфера.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Меню</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="schedule.html">Афиша</a></li>
+                        <li><a href="about.html">О театре</a></li>
+                        <li><a href="news.html">Новости</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <ul class="footer-contacts">
+                        <li><i class="fas fa-map-marker-alt"></i> г. Санкт-Петербург, Невский пр., 88</li>
+                        <li><i class="fas fa-phone-alt"></i> +7 (812) 123-45-67</li>
+                        <li><i class="far fa-envelope"></i> info@feeriya-theatre.ru</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Режим работы</h4>
+                    <ul class="footer-hours">
+                        <li>Касса: ежедневно 11:00 – 20:00</li>
+                        <li>Спектакли: ср–вс 18:00 – 22:00</li>
+                        <li>Выходной: понедельник</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Театр «Феерия». Все права защищены.</p>
+                <p>Разработка в рамках дипломного проекта</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========= МОДАЛЬНОЕ ОКНО ========= -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-container">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-icon">
+                <i class="fas fa-ticket-alt"></i>
+            </div>
+            <h2>Билеты только в кассе</h2>
+            <p>Уважаемые зрители! Приносим извинения, но онлайн-продажа билетов временно недоступна.</p>
+            <p>Приобрести билеты можно в кассе театра по адресу:</p>
+            <div class="modal-address">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>г. Санкт-Петербург, Невский пр., 88</span>
+            </div>
+            <div class="modal-hours">
+                <i class="fas fa-clock"></i>
+                <span>Ежедневно с 11:00 до 20:00</span>
+            </div>
+            <div class="modal-phone">
+                <i class="fas fa-phone-alt"></i>
+                <span>+7 (812) 123-45-67</span>
+            </div>
+            <button class="modal-btn" id="modalOkBtn">Понятно, спасибо</button>
+        </div>
+    </div>
+<!-- ========= МОДАЛЬНОЕ ОКНО ДЕТАЛЕЙ СПЕКТАКЛЯ ========= -->
+<div class="modal-overlay" id="performanceModalOverlay">
+    <div class="performance-modal-container">
+        <button class="modal-close" id="performanceModalClose">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="performance-modal-content" id="performanceModalContent">
+        </div>
+    </div>
+</div>
+    <script src="js/schedule.js"></script>
+</body>
+</html>

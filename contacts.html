@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Театр «Феерия» — Контакты</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/contacts.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+
+    <!-- ========= ШАПКА ========= -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fas fa-mask"></i>
+                    <span>Театр «Феерия»</span>
+                </a>
+            </div>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="schedule.html">Афиша</a></li>
+                    <li><a href="about.html">О театре</a></li>
+                    <li><a href="news.html">Новости</a></li>
+                    <li><a href="contacts.html" class="active">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#" class="btn-ticket" id="mainBuyBtn">
+                    <i class="fas fa-ticket-alt"></i>
+                    Купить билет
+                </a>
+            </div>
+
+            <button class="burger-menu" id="burgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-list">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="schedule.html">Афиша</a></li>
+            <li><a href="about.html">О театре</a></li>
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="#" class="mobile-btn-ticket" id="mobileBuyBtn">Купить билет</a></li>
+        </ul>
+    </div>
+
+    <!-- ========= HERO ========= -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1>Контакты</h1>
+                <div class="breadcrumbs">
+                    <a href="index.html">Главная</a>
+                    <span>/</span>
+                    <span class="current">Контакты</span>
+                </div>
+                <p class="hero-description-short">Как нас найти, связаться и забронировать билеты</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========= КОНТАКТНАЯ ИНФОРМАЦИЯ ========= -->
+    <section class="contact-info">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Адрес театра</h3>
+                    <p>г. Санкт-Петербург,<br>Невский проспект, 88</p>
+                    <a href="#" class="info-link" id="showMapBtn">
+                        <i class="fas fa-location-dot"></i> Показать на карте
+                    </a>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Телефоны</h3>
+                    <p>Касса: +7 (812) 123-45-67<br>Администрация: +7 (812) 123-45-68<br>PR-отдел: +7 (812) 123-45-69</p>
+                    <a href="tel:+78121234567" class="info-link">
+                        <i class="fas fa-phone"></i> Позвонить
+                    </a>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Электронная почта</h3>
+                    <p>info@feeriya-theatre.ru — общие вопросы<br>pr@feeriya-theatre.ru — для СМИ<br>booking@feeriya-theatre.ru — бронирование</p>
+                    <a href="mailto:info@feeriya-theatre.ru" class="info-link">
+                        <i class="fas fa-paper-plane"></i> Написать нам
+                    </a>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Режим работы</h3>
+                    <p>Касса: ежедневно 11:00 – 20:00<br>Спектакли: ср–вс 18:00 – 22:00<br>Выходной: понедельник</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========= КАРТА ========= -->
+    <section class="map-section" id="mapSection">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Как добраться</span>
+                <h2 class="section-title">Мы на карте</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="map-wrapper">
+                <div class="map-container">
+                    <div id="map"></div>
+                </div>
+                <div class="map-overlay-info">
+                    <div class="map-info-card">
+                        <i class="fas fa-map-pin"></i>
+                        <div>
+                            <strong>Театр «Феерия»</strong>
+                            <span>Невский пр., 88, Санкт-Петербург</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========= СХЕМА ПРОЕЗДА ========= -->
+    <section class="directions">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Как добраться</span>
+                <h2 class="section-title">Схема проезда</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="directions-grid">
+                <div class="direction-card">
+                    <div class="direction-icon">
+                        <i class="fas fa-subway"></i>
+                    </div>
+                    <h3>Метро</h3>
+                    <p>Станции «Невский проспект» (выход на канал Грибоедова) или «Гостиный двор». От метро 5 минут пешком.</p>
+                </div>
+                <div class="direction-card">
+                    <div class="direction-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <h3>Наземный транспорт</h3>
+                    <p>Автобусы: 3, 7, 22, 27<br>Троллейбусы: 1, 5, 10, 22<br>Остановка «Невский проспект»</p>
+                </div>
+                <div class="direction-card">
+                    <div class="direction-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>На автомобиле</h3>
+                    <p>Парковка для зрителей расположена во дворе театра (въезд с набережной канала Грибоедова).</p>
+                </div>
+                <div class="direction-card">
+                    <div class="direction-icon">
+                        <i class="fas fa-wheelchair"></i>
+                    </div>
+                    <h3>Доступная среда</h3>
+                    <p>Театр оборудован пандусами и специальными местами для зрителей с ограниченными возможностями.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========= ОТДЕЛЫ ТЕАТРА ========= -->
+    <section class="departments">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Свяжитесь с нами</span>
+                <h2 class="section-title">Отделы театра</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="departments-grid">
+                <div class="department-item">
+                    <div class="department-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h3>Касса</h3>
+                    <p><i class="fas fa-phone-alt"></i> +7 (812) 123-45-67</p>
+                    <p><i class="fas fa-envelope"></i> tickets@feeriya-theatre.ru</p>
+                    <p class="work-hours"><i class="fas fa-clock"></i> Пн–Вс: 11:00–20:00</p>
+                </div>
+                <div class="department-item">
+                    <div class="department-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Администрация</h3>
+                    <p><i class="fas fa-phone-alt"></i> +7 (812) 123-45-68</p>
+                    <p><i class="fas fa-envelope"></i> admin@feeriya-theatre.ru</p>
+                    <p class="work-hours"><i class="fas fa-clock"></i> Пн–Пт: 10:00–18:00</p>
+                </div>
+                <div class="department-item">
+                    <div class="department-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>PR и реклама</h3>
+                    <p><i class="fas fa-phone-alt"></i> +7 (812) 123-45-69</p>
+                    <p><i class="fas fa-envelope"></i> pr@feeriya-theatre.ru</p>
+                    <p class="work-hours"><i class="fas fa-clock"></i> Пн–Пт: 10:00–18:00</p>
+                </div>
+                <div class="department-item">
+                    <div class="department-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Экскурсии</h3>
+                    <p><i class="fas fa-phone-alt"></i> +7 (812) 123-45-70</p>
+                    <p><i class="fas fa-envelope"></i> tours@feeriya-theatre.ru</p>
+                    <p class="work-hours"><i class="fas fa-clock"></i> Пн–Пт: 11:00–17:00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========= ФУТЕР ========= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-mask"></i>
+                        <span>Театр «Феерия»</span>
+                    </div>
+                    <p class="footer-desc">Магия сцены, которая трогает душу. Уютный зал, изысканные постановки, уникальная атмосфера.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Меню</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="schedule.html">Афиша</a></li>
+                        <li><a href="about.html">О театре</a></li>
+                        <li><a href="news.html">Новости</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <ul class="footer-contacts">
+                        <li><i class="fas fa-map-marker-alt"></i> г. Санкт-Петербург, Невский пр., 88</li>
+                        <li><i class="fas fa-phone-alt"></i> +7 (812) 123-45-67</li>
+                        <li><i class="far fa-envelope"></i> info@feeriya-theatre.ru</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Режим работы</h4>
+                    <ul class="footer-hours">
+                        <li>Касса: ежедневно 11:00 – 20:00</li>
+                        <li>Спектакли: ср–вс 18:00 – 22:00</li>
+                        <li>Выходной: понедельник</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Театр «Феерия». Все права защищены.</p>
+                <p>Разработка в рамках дипломного проекта</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========= МОДАЛЬНЫЕ ОКНА ========= -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-container">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-icon">
+                <i class="fas fa-ticket-alt"></i>
+            </div>
+            <h2>Билеты только в кассе</h2>
+            <p>Уважаемые зрители! Приносим извинения, но онлайн-продажа билетов временно недоступна.</p>
+            <div class="modal-divider"></div>
+            <div class="modal-address">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>г. Санкт-Петербург, Невский пр., 88</span>
+            </div>
+            <div class="modal-hours">
+                <i class="fas fa-clock"></i>
+                <span>Ежедневно с 11:00 до 20:00</span>
+            </div>
+            <div class="modal-phone">
+                <i class="fas fa-phone-alt"></i>
+                <span>+7 (812) 123-45-67</span>
+            </div>
+            <button class="modal-btn" id="modalOkBtn">Понятно, спасибо</button>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-container success-modal">
+            <button class="modal-close" id="successClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-icon success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Сообщение отправлено!</h2>
+            <p>Спасибо за обращение. Наш менеджер свяжется с вами в ближайшее время.</p>
+            <button class="modal-btn" id="successOkBtn">Хорошо</button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/contacts.js"></script>
+</body>
+</html>
